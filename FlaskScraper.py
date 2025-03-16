@@ -1,7 +1,7 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, render_template
 import requests
 from bs4 import BeautifulSoup
-import waitress
+
 
 app = Flask(__name__)
 
@@ -31,11 +31,11 @@ def get_weather():
 
     return {"weather": weather, "temperature": temperature, "humidity": humidity}
 
-@app.route("/")
+@app.route("/weather")
 def home():
     return render_template("index.html")
 
-@app.route("/weather", methods=["GET"])
+@app.route("/")
 def weather():
     weather = get_weather()
     return render_template("weather.html", weather=weather)
