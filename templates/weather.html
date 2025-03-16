@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather in Irvine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .weather-box {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌤 Live Weather in Irvine!</h1>
+        <div class="weather-box">🌦 Condition: <b>{{ weather.weather }}</b></div>
+        <div class="weather-box">🌡 Temperature: <b>{{ weather.temperature }}</b></div>
+        <div class="weather-box">💧 Humidity: <b>{{ weather.humidity }}</b></div>
+        <br>
+        <a href="/">🔄 Go Back</a>
+    </div>
+</body>
+</html>
